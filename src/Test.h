@@ -4,8 +4,8 @@
 
 extern CRGB j_leds [];
 
-void runTest {
+void runTest() {
 
-    
+    DrawPixels(0, 1, CRGB::Azure);
 
 }
