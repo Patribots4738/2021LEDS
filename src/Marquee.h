@@ -24,17 +24,6 @@ void DrawMarqueeOld() {
    delay(50); 
 }
 
-#define NUM_COLORS 5
-static const CRGB MarqueeColors [NUM_COLORS] = {
-
-    CRGB::Red,
-    CRGB::Blue,
-    CRGB::Purple,
-    CRGB::Green,
-    CRGB::Orange,
-    
-};
-
 void DrawMarquee() {
 
   static int const blockWidth = 5;    //Sets roughly the ammount of leds total in the marquee

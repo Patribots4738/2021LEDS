@@ -23,7 +23,7 @@ void setup() {
   Serial.begin(115200);
 
   FastLED.addLeds<WS2812B, LED_PIN, GRB>(j_leds, NUM_LEDS);
-  FastLED.setBrightness(25);
+  FastLED.setBrightness(100);
 
   //FastLED.setMaxPowerInMilliWatts(1000);
 
@@ -40,6 +40,6 @@ void loop() {
   //DrawTwinkle();
   //DrawComet();
   
-  FastLED.delay(33);
+  FastLED.delay(15);
 
 }
