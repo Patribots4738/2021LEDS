@@ -21,7 +21,7 @@ void DrawMarqueeOld() {
     for(int i=scroll % 5; i < NUM_LEDS - 1; i +=5) {
         j_leds[i] = CRGB::Black;
     }
-   delay(100); 
+   delay(50); 
 }
 
 #define NUM_COLORS 5
@@ -35,21 +35,21 @@ static const CRGB MarqueeColors [NUM_COLORS] = {
     
 };
 
-const int blockSize = 5;    // How many pixels is one color block
-
 void DrawMarquee() {
+
+  static int const blockWidth = 5;    //Sets roughly the ammount of leds total in the marquee
 
   static float scroll = 0.0f;
   scroll += 0.1f;
+  
     
-  if (scroll > 5.0) {
-    scroll -= 5.0;
+  if (scroll > blockWidth) {
+    scroll -= blockWidth;
     }
 
-  for(float i = scroll; i < NUM_LEDS; i += 5) {
-    DrawPixels(i, 3, CRGB::Aquamarine);
+  for(float i = scroll; i < NUM_LEDS; i += blockWidth) {
+    DrawPixels(i, blockWidth - 2, CRGB::DarkBlue);
+    
     }
-  
-  //delay(500);
 
 }
