@@ -11,6 +11,7 @@ CRGB j_leds[NUM_LEDS] ={0};
 #include "Twinkle.h"
 //#include "Comet.h"
 #include "Bounce.h"
+#include "Test.h"
 
 #define ARRAYSIZE(x) (sizeof(x)/sizeof(x[0]))
 #define TIMES_PER_SECOND(x) EVERY_N_MILLISECONDS(1000/x)
@@ -36,9 +37,11 @@ void loop() {
   // fill_rainbow(j_leds, NUM_LEDS, initialHue += hueDensity, deltaHue);
   // delay(50);
   
-  DrawMarquee();
+  //DrawMarquee();
   //DrawTwinkle();
   //DrawComet();
+
+  runTest();
   
   FastLED.delay(15);
 
