@@ -15,7 +15,7 @@ void setup() {
     pinMode(LEDPIN, OUTPUT);
 
     FastLED.addLeds<WS2812B, LEDPIN, GRB>(z_LEDS, NUMLEDS);
-    FastLED.setBrightness(16);
+    FastLED.setBrightness(100);
 
 }
 
