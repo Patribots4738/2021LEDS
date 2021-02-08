@@ -47,6 +47,11 @@ void loop() {
 
 }
 
+void test() {
+
+  DrawPixels(0, 1, CRGB::Azure);
+
+}
 
 CRGB ColorFraction(CRGB colorIn, float fraction) {
 
@@ -65,23 +70,28 @@ void DrawPixels(float fPos, float count, CRGB color) {
 
   // Blend in the color of the first partial pixel
 
-  if (remaining > 0.0f)
-  {
+  if (remaining > 0.0f) {
+
     FastLED.leds() [iPos++] += ColorFraction(color, amtFirstPixel);
+
     remaining -= amtFirstPixel;
+
   }
 
   // Now draw pixels in the middle
-  while (remaining > 1.0f)
-  {
+  while (remaining > 1.0f) {
+
     FastLED.leds() [iPos++] += color;
+
     remaining--;
+
   }
   
   // Draw tail pixel, up to a single pixel
-  if (remaining > 0.0f)
-  {
+  if (remaining > 0.0f) {
+
     FastLED.leds() [iPos] += ColorFraction(color, remaining);
+
   }
   
 }
