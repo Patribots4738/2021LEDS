@@ -3,12 +3,14 @@
 
 #define LEDPIN 10
 
-#define NUMLEDS 70
+#define NUMLEDS 52
 
 // this has to be called z_LEDS or something gets a reference error
 CRGB z_LEDS[NUMLEDS] = {0};
 
 void setup() {
+
+    FastLED.clear();
 
     pinMode(LEDPIN, OUTPUT);
 
